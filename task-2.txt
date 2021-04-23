@@ -1,0 +1,7 @@
+#! /bin/bash
+
+true > /tmp/numbers.tmp
+
+printf "%5d.%-5d\n" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" "$RANDOM" | tee "/tmp/numbers.tmp"
+
+exit 0
