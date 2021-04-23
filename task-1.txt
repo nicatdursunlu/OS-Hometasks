@@ -1,0 +1,25 @@
+#! /bin/bash
+
+## sketch a long line equals number of equals signs
+line=====================================
+line=$line$line
+
+
+## Format strings for printf
+head="\n %-10s %11s %8s %10s\n"
+format=" %-10s %11.2f %8d %10.2f\n"
+
+## width of the line
+width=44
+
+## print head
+printf "$head" ITEM "PER UNIT" NUM TOTAL
+
+## print signs which match with length of result
+printf "%$width.${width}s\n" "$line"
+
+## print the result
+printf "$format" \
+Chair 79.95 4 319.8 \
+Table 209.99 1 209.99 \
+Armchair 315.49 2 630.98
